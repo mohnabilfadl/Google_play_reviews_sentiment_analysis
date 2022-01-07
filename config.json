@@ -1,0 +1,10 @@
+{
+    "BERT_MODEL": "bert-base-uncased",
+    "PRE_TRAINED_MODEL": "assets/model.pt",
+    "CLASS_NAMES": [
+        "Bad",
+        "Normal",
+        "Wonderfull"
+    ],
+    "MAX_SEQUENCE_LEN": 60
+}
