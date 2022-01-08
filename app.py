@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, Markup
+from flask import Flask, request, render_template
 
 from sentiment_analyzer.model import Model
 
@@ -30,5 +30,5 @@ def pred():
                             confidence = f'Confidence = {confidence} %')
     
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0',port=8000)
    
