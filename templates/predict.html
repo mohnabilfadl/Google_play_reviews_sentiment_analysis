@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Google play reviews sentiment analysis</title>
+<!--
+Comila Template
+http://www.templatemo.com/tm-490-comila
+-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- stylesheets css -->
+	<link rel="icon" href="{{ url_for('static',filename='images/google2.png') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/emoji.css') }}">
+
+  	<link rel="stylesheet" href="{{ url_for('static',filename='css/et-line-font.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/all.css') }}">
+
+  	<link rel="stylesheet" href="{{ url_for('static',filename='css/vegas.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+	<link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<!-- preloader section -->
+<section class="preloader">
+	<div class="sk-circle">
+       <div class="sk-circle1 sk-child"></div>
+       <div class="sk-circle2 sk-child"></div>
+       <div class="sk-circle3 sk-child"></div>
+       <div class="sk-circle4 sk-child"></div>
+       <div class="sk-circle5 sk-child"></div>
+       <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+       <div class="sk-circle8 sk-child"></div>
+       <div class="sk-circle9 sk-child"></div>
+       <div class="sk-circle10 sk-child"></div>
+       <div class="sk-circle11 sk-child"></div>
+       <div class="sk-circle12 sk-child"></div>
+     </div>
+</section>
+<!-- contact section -->
+
+<section id="contact">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-6">
+				<div class="section-title">
+					<h1 class="wow fadeInUp" data-wow-delay="0.3s" style="color: black">predict Section</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.6s">Enter your review and the model will predict it.</p>
+				</div>
+				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+					<form id="contact-form" method="post" action="{{ url_for('pred')}}">
+						<div class="col-md-12 col-sm-12">
+							<textarea name="Sentence" class="form-control" placeholder="enter your review" rows="6" required></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12" style="text-align: center;">
+							{% block body %}
+							{% endblock %}
+							<p>{{ sentiment }}</p>
+						    <p>{{ confidence }}</p>
+
+						</div>
+
+						<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+							<input name="submit" type="submit" class="form-control submit" id="submit" value="predict">
+						</div>
+					
+
+					</form>
+					<div style="text-align: center" class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+						<a href="https://google-play-reviews-sentiment-analysis.azurewebsites.net/"><button class="btn"><i class="fa fa-home"></i></button></a>
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- footer section -->
+<footer id="resume">
+	<div class="container">
+		<div class="row">
+			<svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0 L50 100 L100 0 Z"></path>
+			</svg>
+			<div class="col-md-6 col-sm-6">
+				<h2 class="title"><strong>Machine Learning</strong> Models</h2>
+				<p>There are multiple machine learning algorithms used for sentiment analysis like Support Vector Machine (SVM), logistic regression and Naïve Bayes</p>
+				<h4 class="tm-progress-label">logistic regression<small class="progress-percent-small">0.63</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100" style="width: 63%;"></div>
+				</div>
+				<h4 class="tm-progress-label">SVM<small class="progress-percent-small">0.68</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+				</div>
+				<h4 class="tm-progress-label">Naïve Bayes<small class="progress-percent-small">0.62</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
+				</div>
+
+
+			</div>
+
+			<div class="col-md-6 col-sm-6">
+				<h2 class="title"><strong>Deep Learning</strong> Models</h2>
+				<p>There are multiple Deep learning learning algorithms used for sentiment analysis like Recurrent Neural Network (RNN), Convolutional Neural Network (CNN)and Long Short-Term Memory (LSTM)</p>
+				<h4 class="tm-progress-label">CNN<small class="progress-percent-small">0.58</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100" style="width: 58%;"></div>
+				</div>
+				<h4 class="tm-progress-label">GRU<small class="progress-percent-small">0.65</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+				</div>
+				<h4 class="tm-progress-label">LSTM<small class="progress-percent-small">0.65</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+				</div>
+				<h4 class="tm-progress-label">BERT<small class="progress-percent-small">0.76</small></h4>
+				<div class="progress tm-progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" style="width: 76%;"></div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+</footer>
+
+
+
+
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- javscript js -->
+<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static',filename='js/vegas.min.js') }}"></script>
+
+<script src="{{ url_for('static',filename='js/wow.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/smoothscroll.js') }}"></script>
+<script src="{{ url_for('static',filename='js/custom.js') }}"></script>
+
+</body>
+</html>
