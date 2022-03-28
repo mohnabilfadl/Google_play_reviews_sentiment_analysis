@@ -53,7 +53,14 @@ Sentiment analysis is the classification of a customer's reviews or comments as 
 
 ![image](https://user-images.githubusercontent.com/63733989/160487191-df9d8b4e-492a-452e-b779-ff8f520dea3b.png)
 
+## Dashboard
+
+![Dashboard 1](https://user-images.githubusercontent.com/63733989/160489611-3c27f397-fbeb-47fd-8e27-d0959a982703.png)
+
+## To view Full Dashboard Click [Here](https://public.tableau.com/app/profile/mohamed7684/viz/googleplayreviews/Dashboard1)
 
 
 
-To view Full documentation Click [Here](https://drive.google.com/file/d/1jFnP8QUP4LYLAagbuu6eF9sVke6HfG4d/view?usp=sharing)
+# To view Full documentation Click [Here](https://drive.google.com/file/d/1jFnP8QUP4LYLAagbuu6eF9sVke6HfG4d/view?usp=sharing)
+
+
